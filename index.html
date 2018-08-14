@@ -34,6 +34,9 @@ menu, nav, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+button {
+  outline: none;
+}	
 /* HTML5 display-role reset for older browsers */
 article, figcaption, figure,
 footer, header, menu, nav, section {
@@ -433,6 +436,66 @@ b {
 }
 /* SEATING */
 /* ROOMS */
+#menu6 {
+  position: relative;
+}
+.roomsFloor {
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: rgb(192,151,65);
+}
+.roomsTable {
+  width: 95%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.roomsTable tr {
+  border: 1px solid rgb(127,23,52);
+}
+.roomsTable th {
+  padding: 0.75rem 0;
+  background-color: rgb(127,23,52);
+  color: rgb(246,241,222);
+  font-size: 1.3rem;
+}
+.roomsTable tr td:first-child {
+  width: 20%;
+  border: 1px solid rgb(127,23,52);
+  padding: 0.4rem;
+  color: rgb(192,151,65);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.roomsTable td {
+  padding: 0.4rem;
+  text-align: center;
+  color: rgb(127,23,52);
+  font-size: 1.3rem;
+}
+#roomPrev, #roomNext {
+  position: absolute;
+  top: 1rem;
+  width: 10rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(127,23,52);
+  color: rgb(246,241,222);
+  font-size: 1.25rem;
+}
+#roomPrev {
+  left: 2.5%;
+}
+#roomNext {
+  right: 2.5%;
+}
+#roomPrev:hover, #roomNext:hover {
+  background-color: rgb(192,151,65);
+  color: rgb(246,241,222);
+}
 /* EXTRA */
 #startScreen h3 {
   padding: 5rem 0 5rem 0;
@@ -950,7 +1013,217 @@ b {
 
       <article id="menu5" class="content"><h2>Ültetés tartalom</h2></article>
 
-      <article id="menu6" class="content"><h2>Kolibeosztás tartalom</h2></article>
+      <article id="menu6" class="content">
+	<div id="rooms1">
+          <h2 class="roomsFloor">Földszint</h2>
+          <table class="roomsTable">
+            <tr>
+              <th>Szobaszám</th>
+              <th colspan="4">Beosztás</th>
+            </tr>
+            <tr>
+              <td>1/A</td>
+              <td>Andi</td>
+              <td>Milán</td>
+              <td>Dorka</td>
+              <td>Fancsi</td>
+            </tr>
+            <tr>
+              <td>1/B</td>
+              <td>Melinda</td>
+              <td>Eszter</td>
+              <td>Petra</td>
+              <td>Emi</td>
+            </tr>
+            <tr>
+              <td>3/A</td>
+              <td>Köriapu</td>
+              <td>Ági</td>
+              <td>Norbi</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>3/B</td>
+              <td>Örömanya</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4/A</td>
+              <td>Sárika néni</td>
+              <td>Öcsi bácsi</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4/B</td>
+              <td>Éva néni</td>
+              <td>Misi bácsi</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5/A</td>
+              <td>Gergő</td>
+              <td>Viki</td>
+              <td>Gréti</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5/B</td>
+              <td>Erika</td>
+              <td>Imre</td>
+              <td>Annus néni</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>6/A</td>
+              <td>Évi</td>
+              <td>Tibi</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>6/B</td>
+              <td>Évike</td>
+              <td>Tibike</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>7/A</td>
+              <td>Miska</td>
+              <td>Erzsi</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>7/B</td>
+              <td>Misike</td>
+              <td>Gabi</td>
+              <td>Dávid</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div id="rooms2">
+          <h2 class="roomsFloor">Első emelet</h2>
+          <table class="roomsTable">
+            <tr>
+              <th>Szobaszám</th>
+              <th colspan="3">Beosztás</th>
+            </tr>
+            <tr>
+              <td>101/A</td>
+              <td>Lajos</td>
+              <td>Örömapa</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>101/B</td>
+              <td>Balázs</td>
+              <td>Barbi</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>102/A</td>
+              <td>Atka</td>
+              <td>Kriszta</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>102/B</td>
+              <td>Boni</td>
+              <td>Tami</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>104/A</td>
+              <td>Tibi</td>
+              <td>Inci</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>104/B</td>
+              <td>Sanci</td>
+              <td>Kriszti</td>
+              <td>Kristóf</td>
+            </tr>
+            <tr>
+              <td>108/A</td>
+              <td>Margit néni</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>108/B</td>
+              <td>Kari</td>
+              <td>Erzsi</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>110/A</td>
+              <td>Bea</td>
+              <td>Csabi</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>110/B</td>
+              <td>Vera</td>
+              <td>Miki</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div id="rooms3">
+          <h2 class="roomsFloor">Második emelet</h2>
+          <table class="roomsTable">
+            <tr>
+              <th>Szobaszám</th>
+              <th colspan="3">Beosztás</th>
+            </tr>
+            <tr>
+              <td>201/A</td>
+              <td>Tüsi</td>
+              <td>Zsófi</td>
+              <td>Gordi</td>
+            </tr>
+            <tr>
+              <td>201/B</td>
+              <td>Edit</td>
+              <td>Gergő</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>202/A</td>
+              <td>Adri</td>
+              <td>Alex</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>202/B</td>
+              <td>Ádám</td>
+              <td>Judit</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>215/A</td>
+              <td>Oti</td>
+              <td>Judit</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>215/B</td>
+              <td>Dávid</td>
+              <td>Enci</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <button id="roomPrev" class="roomBtn" onclick="roomsBack()">Előző</button>
+        <button id="roomNext" class="roomBtn" onclick="roomsNext()">Következő</button> 
+      </article>
 
       <article id="menu7" class="content">
         <div id="startScreen">
@@ -1321,6 +1594,38 @@ function location5() {
     locImgReset();
     document.getElementById("loc5").src = "https://i.imgur.com/lKFaham.png";
 }
+/* --- ROOMS --- */
+function roomsReset() {
+    for (var k = 1; k <= 3; k++) {
+        var roomsK = "rooms" + k;
+        document.getElementById(roomsK).style.display = "none";
+    }
+}
+var roomsCounter = 1
+function roomsNext() {
+    roomsReset();
+    if (roomsCounter <= 2) {
+        roomsCounter++;
+        var roomsN = "rooms" + roomsCounter;
+        document.getElementById(roomsN).style.display = "block";
+    } else {
+        roomsCounter = 1;
+        var roomsN1 = "rooms" + roomsCounter;
+        document.getElementById(roomsN1).style.display = "block";
+    }
+}
+function roomsBack() {
+    roomsReset();
+    if (roomsCounter >= 2) {
+        roomsCounter--;
+        var roomsB = "rooms" + roomsCounter;
+        document.getElementById(roomsB).style.display = "block";
+    } else {
+        roomsCounter = 3;
+        var roomsB3 = "rooms" + roomsCounter;
+        document.getElementById(roomsB3).style.display = "block";
+    }
+}			
 /* --- EXTRA --- */
 var points = 0;
 var counter = 0;
