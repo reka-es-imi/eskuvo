@@ -435,6 +435,61 @@ b {
   color: rgb(127,23,52);
 }
 /* SEATING */
+#tables2, #tables3, #tables4, #tables5, #tables6, #tables7 {
+  display: none;
+}
+#menu5 {
+  position: relative;
+}
+.tableNumber {
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: rgb(192,151,65);
+}
+.tableNames {
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid rgb(127,23,52);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tableNames th {
+  border: 1px solid rgb(127,23,52);
+  padding: 0.3rem 0;
+  background-color: rgb(127,23,52);
+  color: rgb(246,241,222);
+  font-size: 1.2rem;
+}
+.tableNames td {
+  width: 25%;
+  height: 2.7rem;
+  padding: 0.4rem;
+  text-align: center;
+  color: rgb(127,23,52);
+  font-size: 1rem;
+}
+#tablePrev, #tableNext {
+  position: absolute;
+  top: 1rem;
+  width: 10rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(127,23,52);
+  color: rgb(246,241,222);
+  font-size: 1.25rem;
+}
+#tablePrev {
+  left: 2.5%;
+}
+#tableNext {
+  right: 2.5%;
+}
+#tablePrev:hover, #tableNext:hover {
+  background-color: rgb(192,151,65);
+  color: rgb(246,241,222);
+}	
 /* ROOMS */
 #rooms2, #rooms3 {
   display: none;
@@ -814,7 +869,7 @@ b {
       <button onclick="button2()" id="navB2" class="navButton">Menetrend</button>
       <button onclick="button3()" id="navB3" class="navButton">Helyszínek</button>
       <button onclick="button4()" id="navB4" class="navButton">Menü</button>
-      <button onclick="button5()" id="navB5" class="navButton" disabled="disabled">Ültetés</button>
+      <button onclick="button5()" id="navB5" class="navButton">Ültetés</button>
       <button onclick="button6()" id="navB6" class="navButton">Szobabeosztás</button>
       <button onclick="button7()" id="navB7" class="navButton">Extra</button>
     </nav>
@@ -1014,7 +1069,336 @@ b {
         </ul>
       </article>
 
-      <article id="menu5" class="content"><h2>Ültetés tartalom</h2></article>
+      <article id="menu5" class="content">
+        <div id="tables1">
+          <h2 class="tableNumber">1. asztal</h2>
+          <table class="tableNames">
+            <tr>
+              <th colspan="4">Névsor</th>
+            </tr>
+            <tr>
+              <td>Erdős Balázs</td>
+              <td>Erdős László</td>
+              <td>Erdős Lászlóné</td>
+              <td>Kun Imréné</td>
+            </tr>
+            <tr>
+              <td>Lázár Péter</td>
+              <td>Molnár Anikó</td>
+              <td>Molnár Gergely</td>
+              <td>Molnár Imre</td>
+            </tr>
+            <tr>
+              <td>Molnár Imre, ifj.</td>
+              <td>Molnár Réka</td>
+              <td>Molnárné Kun Anikó</td>
+              <td>Tóth Barbara</td>
+            </tr>
+          </table>
+        </div>
+        <div id="tables2">
+          <h2 class="tableNumber">2. asztal</h2>
+          <table class="tableNames">
+            <tr>
+              <th colspan="4">Névsor</th>
+            </tr>
+            <tr>
+              <td>Farkas József</td>
+              <td>Molnár Kristóf</td>
+              <td>Molnár Krisztina</td>
+              <td>Molnár Sándor</td>
+            </tr>
+            <tr>
+              <td>Molnár Sándorné</td>
+              <td>Molnár Tibor</td>
+              <td>Molnár Tiborné</td>
+              <td>Molnár Tímea</td>
+            </tr>
+            <tr>
+              <td>Péter Boglárka</td>
+              <td>Péter Diána</td>
+              <td>Péter János</td>
+              <td>Péterné Szabó Tímea</td>
+            </tr>
+          </table>
+        </div>
+        <div id="tables3">
+          <h2 class="tableNumber">3. asztal</h2>
+          <table class="tableNames">
+            <tr>
+              <th colspan="4">Névsor</th>
+            </tr>
+            <tr>
+              <td>Balogh Dávid</td>
+              <td>Balogh-Tóth Beáta</td>
+              <td>Fegyveres Imréné</td>
+              <td>Kun Mária</td>
+            </tr>
+            <tr>
+              <td>Lenti Antal</td>
+              <td>Oláh Fanni</td>
+              <td>Oláh Fruzsina</td>
+              <td>Oláh Sándor</td>
+            </tr>
+            <tr>
+              <td>Oláh Sándor, ifj.</td>
+              <td>Oláh Sándorné</td>
+              <td>Oláh Zsolt</td>
+              <td>Oláhné Fülöp Erzsébet</td>
+            </tr>
+            <tr>
+              <td>Oláhné Lázár Tímea</td>
+              <td>Sárga Adrienn</td>
+              <td>Sárga Balázs</td>
+              <td>Skopkó Boglárka, Dr.</td>
+            </tr>
+            <tr>
+              <td>Skopkó István</td>
+              <td>Skopkó Tamás</td>
+              <td>Skopkóné Lenti Mária</td>
+              <td>Szabó Sándor</td>
+            </tr>
+            <tr>
+              <td>Szegediné Varga Piroska</td>
+              <td>Tóth Ildikó</td>
+              <td>Tóth Izabella</td>
+              <td>Tóth Sándor</td>
+            </tr>
+            <tr>
+              <td>Tóth Szilvia</td>
+              <td>Tóthné Fegyveres Ildikó</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div id="tables4">
+          <h2 class="tableNumber">4. asztal</h2>
+          <table class="tableNames">
+            <tr>
+              <th colspan="4">Névsor</th>
+            </tr>
+            <tr>
+              <td>Fesető Barna</td>
+              <td>Fesető Dávid</td>
+              <td>Fesető Virág</td>
+              <td>Fesetőné Győri Edit</td>
+            </tr>
+            <tr>
+              <td>Győri Hanna</td>
+              <td>Győri László</td>
+              <td>Győri Lászlóné</td>
+              <td>Győriné Fehér Emőke</td>
+            </tr>
+            <tr>
+              <td>József Lili</td>
+              <td>József Márton</td>
+              <td>Kiss Ferenc</td>
+              <td>Kiss Ferenc Ágoston</td>
+            </tr>
+            <tr>
+              <td>Kiss Ildikó</td>
+              <td>Kiss Izabella Lujza</td>
+              <td>Kiss Józsefné</td>
+              <td>Kiss Petronella</td>
+            </tr>
+            <tr>
+              <td>Molnár Bálint</td>
+              <td>Molnár Fruzsina</td>
+              <td>Molnár István</td>
+              <td>Molnár István, ifj.</td>
+            </tr>
+            <tr>
+              <td>Molnár Istvánné</td>
+              <td>Molnár Judit</td>
+              <td>Molnár Levente</td>
+              <td>Molnár Pista bácsi</td>
+            </tr>
+            <tr>
+              <td>Molnárné Major Katalin</td>
+              <td>Vadnai Tamás</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div id="tables5">
+          <h2 class="tableNumber">5. asztal</h2>
+          <table class="tableNames">
+            <tr>
+              <th colspan="4">Névsor</th>
+            </tr>
+            <tr>
+              <td>Erdős Attila</td>
+              <td>Erdős Bonifác</td>
+              <td>Erdős Tamara</td>
+              <td>Gál Kriszta</td>
+            </tr>
+            <tr>
+              <td>Gál Réka</td>
+              <td>Kaffka Évi</td>
+              <td>Kaffka Tibor</td>
+              <td>Kaffka Tibor, ifj.</td>
+            </tr>
+            <tr>
+              <td>Kaffka Tiborné</td>
+              <td>Kovács Gabriella</td>
+              <td>Kovács Károly</td>
+              <td>Kovács Károlyné</td>
+            </tr>
+            <tr>
+              <td>Malik Mihály</td>
+              <td>Malik Mihályné</td>
+              <td>Maya Ágnes</td>
+              <td>Melich István</td>
+            </tr>
+            <tr>
+              <td>Melich Norbert</td>
+              <td>Németh Károly</td>
+              <td>Némethné Kovács Sarolta</td>
+              <td>Simó Dávid</td>
+            </tr>
+            <tr>
+              <td>Simó Mihály</td>
+              <td>Simó Mihály, ifj.</td>
+              <td>Simó Mihályné</td>
+              <td>Tóth Gergő</td>
+            </tr>
+            <tr>
+              <td>Tóth Gréti</td>
+              <td>Tóth Imre</td>
+              <td>Tóth-Csetneki Viktória</td>
+              <td>Ubrankovics Erika</td>
+            </tr>
+            <tr>
+              <td>Ubrankovics Károlyné</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div id="tables6">
+          <h2 class="tableNumber">6. asztal</h2>
+          <table class="tableNames">
+            <tr>
+              <th colspan="4">Névsor</th>
+            </tr>
+            <tr>
+              <td>Basia Krawczyk</td>
+              <td>Cs. Nagy Endre</td>
+              <td>Forgács Lajos</td>
+              <td>Forgács Lajos, ifj.</td>
+            </tr>
+            <tr>
+              <td>Gáll Gergő</td>
+              <td>Gellén László</td>
+              <td>Gombos Fruzsina</td>
+              <td>Gordos Tamás</td>
+            </tr>
+            <tr>
+              <td>Gorza Adrienn</td>
+              <td>Ion Alex</td>
+              <td>Jánosi Edit</td>
+              <td>Kulcsár Imre</td>
+            </tr>
+            <tr>
+              <td>Nagy Gábor Ottó</td>
+              <td>Nagy Péter</td>
+              <td>Nagy-Lenkei Judit</td>
+              <td>Oláh István</td>
+            </tr>
+            <tr>
+              <td>Pásztor Tamás</td>
+              <td>Pásztor-Dávid Zsófia</td>
+              <td>Szarvas Dávid</td>
+              <td>Teremi Sára</td>
+            </tr>
+            <tr>
+              <td>Tóth András</td>
+              <td>Tóth Teodóra</td>
+              <td>Türk Ádám</td>
+              <td>Ujváry Enikő</td>
+            </tr>
+            <tr>
+              <td>Varga Kamilla</td>
+              <td>Vazsita Judit</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+       <div id="tables7">
+          <h2 class="tableNumber">7. asztal</h2>
+          <table class="tableNames">
+            <tr>
+              <th colspan="4">Névsor</th>
+            </tr>
+            <tr>
+              <td>Balog Miklós</td>
+              <td>Barkó Annamária</td>
+              <td>Barkó Sándor</td>
+              <td>Barkó Sándor, ifj.</td>
+            </tr>
+            <tr>
+              <td>Barkó Zsófia</td>
+              <td>Barkóné Takács Mária</td>
+              <td>Birinyi Dominika</td>
+              <td>Csomós Attila</td>
+            </tr>
+            <tr>
+              <td>Csomós Nándor</td>
+              <td>Csomósné Molnár Mónika</td>
+              <td>Fodor Fanni</td>
+              <td>Füles Marci</td>
+            </tr>
+            <tr>
+              <td>Füles Péter</td>
+              <td>Füles-Kovács Rita</td>
+              <td>Gregor Veronika</td>
+              <td>Jobbágy Andrea</td>
+            </tr>
+            <tr>
+              <td>Kleofász Mátyás</td>
+              <td>Molnár Sándor</td>
+              <td>Molnár Sándorné</td>
+              <td>Mundi Beáta</td>
+            </tr>
+            <tr>
+              <td>Mundi Csaba</td>
+              <td>Nagy Andrea, Dr.</td>
+              <td>Nagy Lili</td>
+              <td>Nagy Sándor</td>
+            </tr>
+            <tr>
+              <td>Nagy Sándorné</td>
+              <td>Nagy Tamás</td>
+              <td>Szabados Nándor</td>
+              <td>Szabados Nándor, ifj.</td>
+            </tr>
+            <tr>
+              <td>Szabados-Nagy Rita</td>
+              <td>Szabó Imre, Dr.</td>
+              <td>Szabó Judit</td>
+              <td>Szabó Kata</td>
+            </tr>
+            <tr>
+              <td>Szabó Krisztina</td>
+              <td>Szabóné Túri Judit, Dr.</td>
+              <td>Tolnai Dorka</td>
+              <td>Tolnai Fanni</td>
+            </tr>
+            <tr>
+              <td>Tolnai Milán</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <button id="tablePrev" class="tableBtn" onclick="tableBack()">Előző</button>
+        <button id="tableNext" class="tableBtn" onclick="tableNext()">Következő</button>	    
+      </article>
 
       <article id="menu6" class="content">
 	<div id="rooms1">
@@ -1597,6 +1981,38 @@ function location5() {
     locImgReset();
     document.getElementById("loc5").src = "https://i.imgur.com/lKFaham.png";
 }
+/* --- TABLES --- */
+function tablesReset() {
+    for (var m = 1; m <= 7; m++) {
+        var tablesM = "tables" + m;
+        document.getElementById(tablesM).style.display = "none";
+    }
+}
+var tablesCounter = 1
+function tableNext() {
+    tablesReset();
+    if (tablesCounter <= 6) {
+        tablesCounter++;
+        var tablesN = "tables" + tablesCounter;
+        document.getElementById(tablesN).style.display = "block";
+    } else {
+        tablesCounter = 1;
+        var tablesN1 = "tables" + tablesCounter;
+        document.getElementById(tablesN1).style.display = "block";
+    }
+}
+function tableBack() {
+    tablesReset();
+    if (tablesCounter >= 2) {
+        tablesCounter--;
+        var tablesB = "tables" + tablesCounter;
+        document.getElementById(tablesB).style.display = "block";
+    } else {
+        tablesCounter = 7;
+        var tablesB7 = "tables" + tablesCounter;
+        document.getElementById(tablesB7).style.display = "block";
+    }
+}	
 /* --- ROOMS --- */
 function roomsReset() {
     for (var k = 1; k <= 3; k++) {
