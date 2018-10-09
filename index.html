@@ -761,7 +761,40 @@ b {
 #moveBack:hover {
   background-color: rgb(127,23,52);
   color: rgb(246,241,222);
+}	
+/* GIFTS */
+#menu8 {
+  background-image: url('https://i.imgur.com/7TgdTwv.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+#menu8 h3 {
+  padding: 2rem 0 0.5rem 0;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: rgb(127,23,52);
+}
+.gifts {
+  height: 20%;
+  display: block;
+  width: 25%;
+  border-radius: 50%;
+  margin: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+.gifts:link, .gifts:visited {
+  text-decoration: none;
+  background-color: rgb(192,151,65);
+  color: rgb(246,241,222);
+}
+.gifts:hover, .gifts:active {
+  cursor: pointer;
+  background-color: rgb(127,23,52);
+  color: rgb(246,241,222);
+}	
 /* --- FOOTER STYLING --- */
 /* --- FOOTER STYLING: COUNTDOWN --- */
 #countDownSection {
@@ -796,22 +829,6 @@ b {
   font-size: 1.75rem;
   font-family: 'Great Vibes', cursive;
   color: rgb(192,151,65);
-}
-#countDownFinished {
-  display: none;
-  margin: 1rem 0;
-}
-#countDownFinished {
-	height: 0;
-	padding-bottom: 56.25%; /* 16:9 aspect ratio */
-	position: relative;
-}
-#countDownFinished iframe {
-	position: absolute;
-	top: 0;
-	height: 100%;
-  border: 2px solid rgb(127,23,52);
-  box-shadow: 3px 3px 3px rgba(238,206,172,0.8);
 }
 /* --- FOOTER STYLING: CONTACT --- */
 #contact {
@@ -872,6 +889,7 @@ b {
       <button onclick="button5()" id="navB5" class="navButton">Ültetés</button>
       <button onclick="button6()" id="navB6" class="navButton">Szobabeosztás</button>
       <button onclick="button7()" id="navB7" class="navButton">Extra</button>
+      <button onclick="button8()" id="navB8" class="navButton">Ajándék Nektek</button>
     </nav>
 
     <main class="flex">
@@ -1655,8 +1673,19 @@ b {
           <button id="moveBack" onclick="moveToStartGame()">Vissza</button>
         </div>
       </article>
+ 
+      <article id="menu8" class="content">
+        <h3>Fogadjátok szeretettel</h3>
+        <div id="giftArea">
+          <a href="https://photos.google.com/share/AF1QipMdNgJopoyQvqmezm5h99yDY3VrKBfF8nzXmr6_c0tl3UL76Sj3FeeJglauqO9o5A?key=Q2ktTmd0bTlseUJMR3RYcWo4WUtJaThjZ1dxRnlB" target="_blank" class="gifts">Fotók</a>
+          <a href="https://venterattila.smugmug.com/R%C3%A9ka-Imi/n-LFwS5C" target="_blank" class="gifts">Még több fotó</a>
+          <a href="https://www.youtube.com/watch?v=9IreV8Vhvm0" target="_blank" class="gifts">Videó</a>
+          <a href="https://www.youtube.com/watch?v=nT5MOYI6wK4" target="_blank" class="gifts">Még egy videó</a>
+          <a href="https://www.youtube.com/watch?v=AH3E1InX9qs" target="_blank" class="gifts">Extra videó</a>
+          <a href="https://www.youtube.com/watch?v=G1IbRujko-A" target="_blank" class="gifts">Az örök jókedvre</a>
+        </div>
+      </article>
     </main>
-
 
     <footer class="flex">
       <div id="countDownSection">
@@ -1674,13 +1703,10 @@ b {
             <td class="unit">mp</td>
           </tr>
           <tr>
-            <td colspan="4" class="text">...múlva találkozunk...</td>
+            <td colspan="4" class="text">...házaspárként eltöltött idő...</td>
           </tr>
         </table>
       </div>
-      <figure id="countDownFinished">
-        <iframe id="startGandalf" width="854" height="480" src=""></iframe>
-      </figure>
       <div id="contactSection">
         <p id="contact">Kérdés esetén fordulj hozzánk bizalommal:</p>
         <table class="contactUs">
@@ -1756,7 +1782,7 @@ document.getElementById('welcomeMessage').innerHTML = 'Kedves ' + guest + '!';
 document.getElementById('gameEndMessage').innerHTML = 'Kedves ' + guest + '!';
 /* --- NAV BUTTONS --- */
 function buttonDefault() {
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < 8; i++) {
         var x = document.getElementsByClassName('content');
         x[i].style.display = 'none';
         var y = document.getElementsByTagName('button');
@@ -1797,6 +1823,11 @@ function button7() {
     buttonDefault();
     document.getElementById('menu7').style.display = 'block';
     document.getElementById('navB7').className = 'navButtonActive';
+}
+function button8() {
+    buttonDefault();
+    document.getElementById('menu8').style.display = 'block';
+    document.getElementById('navB8').className = 'navButtonActive';
 }
 /* --- CONTENT DISPLAY --- */
 // EASTER EGG
@@ -2230,22 +2261,15 @@ var x = setInterval(function() {
     // FIND DISTANCE
     var distance = countDownDate - now;
     // CALCULATE TIME
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var days = Math.abs(Math.floor(distance / (1000 * 60 * 60 * 24)));
+    var hours = Math.abs(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    var minutes = Math.abs(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+    var seconds = Math.abs(Math.floor((distance % (1000 * 60)) / 1000));
     // DISPLAY RESULT
     document.getElementById('cdDays').innerHTML = days;
     document.getElementById('cdHours').innerHTML = hours;
     document.getElementById('cdMinutes').innerHTML = minutes;
     document.getElementById('cdSeconds').innerHTML = seconds;
-    // AFTER FINISHED
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById('countDownSection').style.display = 'none';
-        document.getElementById('countDownFinished').style.display = 'block';
-	document.getElementById('startGandalf').src = 'https://www.youtube.com/embed/Sagg08DrO5U?autoplay=0'
-    }
 }, 1000);
 </script>
 </body>
